@@ -18,23 +18,23 @@ Console.WriteLine("What is your name?");
 string name = Console.ReadLine();
 Console.WriteLine($"Hello, {name}! Welcome to the Cybersecurity Chatbot.");
 
+
 string[,] TipsDatabase = new string[3, 3]
 {
     {
-        "Make passwords at least 12–16 characters long.",
-        "Use a mix of uppercase and lowercase letters, numbers, and symbols when creating passwords.",
-        "Alternatively, use a \"passphrase\" made of 4 or more random, unrelated words when creating passwords."
+        "Use passwords that are at least 12–16 characters long.",
+        "Use a unique password for every account and avoid reusing passwords.",
+        "Consider using a password manager to securely store your passwords."
     },
     {
-        "I'm reading a book on anti-gravity. I just can't put it down.",
-        "Hi Hungry, I'm Dad.",
-        "What do you call a fake noodle? An impasta."
+        "Be careful of suspicious emails or messages asking for personal information.",
+        "Check links carefully before clicking and make sure they come from a trusted source.",
+        "Never share your passwords, PINs, or sensitive information through suspicious messages."
     },
     {
-        "What do you call a bear with no teeth? A gummy bear.",
-        "Why don't scientists trust atoms? Because they make up everything!",
-        "What do you get from a pampered cow? Spoiled milk."
+        "Keep your operating system and software updated to protect against malware.",
+        "Install trusted antivirus or anti-malware software and keep it updated.",
+        "Avoid downloading files or programs from unknown or untrusted websites."
     }
 };
-
 Random random = new Random();

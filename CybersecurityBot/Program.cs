@@ -18,6 +18,10 @@ Console.WriteLine("Application started!");
 Console.WriteLine("What is your name?");
 string name = Console.ReadLine();
 Console.WriteLine($"Hello, {name}! Welcome to the Cybersecurity Chatbot.");
+Console.WriteLine("What is your favorite color?");
+string color = Console.ReadLine();
+Console.WriteLine($"Great! {color} is a nice color. {color} is actually my favorite color too.");
+Console.WriteLine("I can provide you with cybersecurity tips to help you stay safe online.");
 Console.WriteLine();
 
 string[,] TipsDatabase = new string[3, 3]
@@ -43,7 +47,7 @@ Random random = new Random();
 
 while (true)
 {
-
+   
     Console.WriteLine("What kind of cybersecurity tip do you want?");
     Console.WriteLine("Choose between: Password, Phishing, Malware");
 

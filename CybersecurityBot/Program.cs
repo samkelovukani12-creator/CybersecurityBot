@@ -18,7 +18,6 @@ Console.WriteLine("What is your name?");
 string name = Console.ReadLine();
 Console.WriteLine($"Hello, {name}! Welcome to the Cybersecurity Chatbot.");
 
-
 string[,] TipsDatabase = new string[3, 3]
 {
     {

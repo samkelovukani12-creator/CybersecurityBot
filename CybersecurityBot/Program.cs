@@ -1,4 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using System;
 using System.Media;
 Console.ForegroundColor = ConsoleColor.Blue;
 Console.WriteLine(@"_________        ___.                                                  .__  __           __________        __   
@@ -17,6 +18,7 @@ Console.WriteLine("Application started!");
 Console.WriteLine("What is your name?");
 string name = Console.ReadLine();
 Console.WriteLine($"Hello, {name}! Welcome to the Cybersecurity Chatbot.");
+Console.WriteLine();
 
 string[,] TipsDatabase = new string[3, 3]
 {
@@ -37,3 +39,41 @@ string[,] TipsDatabase = new string[3, 3]
     }
 };
 Random random = new Random();
+
+
+while (true)
+{
+
+    Console.WriteLine("What kind of cybersecurity tip do you want?");
+    Console.WriteLine("Choose between: Password, Phishing, Malware");
+
+    string input = Console.ReadLine();
+
+    if (input.ToUpper().Contains("PASSWORD"))
+    {
+        int randomIndex = random.Next(0, 3);
+        Console.WriteLine("Cybersecurity Tip:");
+        Console.WriteLine(TipsDatabase[0, randomIndex]);
+    }
+
+    else if (input.ToUpper().Contains("PHISHING"))
+    {
+        int randomIndex = random.Next(0, 3);
+        Console.WriteLine("Cybersecurity Tip:");
+        Console.WriteLine(TipsDatabase[1, randomIndex]);
+    }
+
+    else if (input.ToUpper().Contains("MALWARE"))
+    {
+        int randomIndex = random.Next(0, 3);
+        Console.WriteLine("Cybersecurity Tip:");
+        Console.WriteLine(TipsDatabase[2, randomIndex]);
+    }
+
+    else
+    {
+        Console.WriteLine( "Invalid input. Please choose between: Password, Phishing, Malware, or Exit.");
+    }
+
+    Console.WriteLine();
+}

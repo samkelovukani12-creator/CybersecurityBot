@@ -14,13 +14,18 @@ using SoundPlayer player = new SoundPlayer("Startup.wav");
 
 player.Play();
 
-Console.WriteLine("Application started!");
+Console.WriteLine("Application running.....");
 Console.WriteLine("What is your name?");
 string name = Console.ReadLine();
 Console.WriteLine($"Hello, {name}! Welcome to the Cybersecurity Chatbot.");
+Console.WriteLine();
 Console.WriteLine("What is your favorite color?");
 string color = Console.ReadLine();
 Console.WriteLine($"Great! {color} is a nice color. {color} is actually my favorite color too.");
+Console.WriteLine();
+Console.WriteLine("How old are you?");
+string age = Console.ReadLine();
+Console.WriteLine($"Wow, {age} years old! That's a great age to start learning about cybersecurity.");
 Console.WriteLine("I can provide you with cybersecurity tips to help you stay safe online.");
 Console.WriteLine();
 

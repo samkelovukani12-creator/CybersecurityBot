@@ -19,7 +19,7 @@ class CybersecurityChatbot : User
 {
     private Random random = new Random();
 
-    // 2D array containing cybersecurity tips
+    // 2D array that will store cybersecurity tips
     private string[,] TipsDatabase =
     {
         {
@@ -53,8 +53,7 @@ class CybersecurityChatbot : User
     public void StartChat()
     {
         Console.WriteLine("==============================================");
-        Console.WriteLine("       CYBERSECURITY CHATBOT");
-        Console.WriteLine("==============================================");
+        Console.Writeline("WELCOME TO THE CYBERSECURITY CHATBOT");
         Console.WriteLine();
 
         Console.WriteLine("Chatbot: Application running.....");

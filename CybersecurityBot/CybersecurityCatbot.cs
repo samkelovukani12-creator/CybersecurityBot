@@ -40,13 +40,11 @@ class CybersecurityChatbot : User
     {
     }
 
-
-    // =====================================================
-    // START CHAT
-    // =====================================================
+    // This method starts the chatbot conversation with the user
 
     public void StartChat()
     {
+        Console.ForegroundColor = ConsoleColor.Blue;
         Console.WriteLine("==============================================");
         Console.WriteLine("     WELCOME TO THE CYBERSECURITY CHATBOT");
         Console.WriteLine("==============================================");

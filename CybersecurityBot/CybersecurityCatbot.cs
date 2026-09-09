@@ -10,10 +10,8 @@ class CybersecurityChatbot : User
 {
     private Random random = new Random();
 
-    // =====================================================
-    // 2D ARRAY - CYBERSECURITY TIPS
-    // =====================================================
-
+    // 2D array that stores cybersecurity tips
+    
     private string[,] TipsDatabase =
     {
         {
@@ -36,9 +34,7 @@ class CybersecurityChatbot : User
     };
 
 
-    // =====================================================
-    // CONSTRUCTOR
-    // =====================================================
+    // Constructor for the CybersecurityChatbot class
 
     public CybersecurityChatbot(string name) : base(name)
     {
@@ -83,9 +79,7 @@ class CybersecurityChatbot : User
     }
 
 
-    // =====================================================
-    // CONVERSATION
-    // =====================================================
+    // This method handles the conversation with the user
 
     private void Conversation()
     {
@@ -105,9 +99,7 @@ class CybersecurityChatbot : User
 
             string message = input.Trim().ToLower();
 
-            // =================================================
-            // EXIT
-            // =================================================
+            // This section handles exiting the conversation
 
             if (message == "exit" ||
                 message == "quit" ||
@@ -127,16 +119,15 @@ class CybersecurityChatbot : User
     }
 
 
-    // =====================================================
-    // RESPOND TO USER
-    // =====================================================
+    // This method responds to the user's message based on keywords and phrases
+
 
     private void RespondToUser(string message)
     {
 
-        // =================================================
-        // GREETING
-        // =================================================
+
+        // Greeting
+
 
         if (message == "hello" ||
             message == "hi" ||
@@ -145,11 +136,6 @@ class CybersecurityChatbot : User
             Console.WriteLine($"Chatbot: Hello {name}! How can I help you today?");
         }
 
-
-        // =================================================
-        // HOW ARE YOU
-        // =================================================
-
         else if (message.Contains("how are you"))
         {
             Console.WriteLine("Chatbot: I'm doing great!");
@@ -157,20 +143,12 @@ class CybersecurityChatbot : User
         }
 
 
-        // =================================================
-        // USER NAME
-        // =================================================
-
         else if (message.Contains("my name"))
         {
             Console.WriteLine($"Chatbot: Your name is {name}.");
         }
 
 
-        // =================================================
-        // STRONG PASSWORD
-        // This must appear BEFORE the general password check.
-        // =================================================
 
         else if (message.Contains("strong password") ||
                  message.Contains("create a password") ||
@@ -186,10 +164,6 @@ class CybersecurityChatbot : User
         }
 
 
-        // =================================================
-        // PASSWORD
-        // =================================================
-
         else if (message.Contains("password"))
         {
             Console.WriteLine("Chatbot: Password security is very important.");
@@ -203,10 +177,6 @@ class CybersecurityChatbot : User
             Console.WriteLine("Chatbot: You can also ask me how to create a strong password.");
         }
 
-
-        // =================================================
-        // PHISHING
-        // =================================================
 
         else if (message.Contains("phishing") ||
                  message.Contains("phish"))
@@ -226,10 +196,6 @@ class CybersecurityChatbot : User
         }
 
 
-        // =================================================
-        // PHISHING SIGNS
-        // =================================================
-
         else if (message.Contains("identify phishing") ||
                  message.Contains("signs of phishing") ||
                  message.Contains("phishing signs"))
@@ -244,10 +210,6 @@ class CybersecurityChatbot : User
             Console.WriteLine("- Messages pretending to be from trusted companies.");
         }
 
-
-        // =================================================
-        // MALWARE
-        // =================================================
 
         else if (message.Contains("malware") ||
                  message.Contains("virus"))
@@ -264,9 +226,6 @@ class CybersecurityChatbot : User
         }
 
 
-        // =================================================
-        // HACKING
-        // =================================================
 
         else if (message.Contains("hacking") ||
                  message.Contains("hacker"))
@@ -283,9 +242,6 @@ class CybersecurityChatbot : User
         }
 
 
-        // =================================================
-        // TWO-FACTOR AUTHENTICATION
-        // =================================================
 
         else if (message.Contains("two factor") ||
                  message.Contains("two-factor") ||
@@ -303,9 +259,6 @@ class CybersecurityChatbot : User
         }
 
 
-        // =================================================
-        // SOCIAL MEDIA
-        // =================================================
 
         else if (message.Contains("social media") ||
                  message.Contains("instagram") ||
@@ -323,9 +276,6 @@ class CybersecurityChatbot : User
         }
 
 
-        // =================================================
-        // PUBLIC WI-FI
-        // =================================================
 
         else if (message.Contains("wifi") ||
                  message.Contains("wi-fi") ||
@@ -343,10 +293,7 @@ class CybersecurityChatbot : User
         }
 
 
-        // =================================================
-        // ANTIVIRUS
-        // =================================================
-
+        
         else if (message.Contains("antivirus") ||
                  message.Contains("anti-virus"))
         {
@@ -359,9 +306,6 @@ class CybersecurityChatbot : User
         }
 
 
-        // =================================================
-        // PRIVACY
-        // =================================================
 
         else if (message.Contains("privacy") ||
                  message.Contains("personal information"))
@@ -380,10 +324,6 @@ class CybersecurityChatbot : User
         }
 
 
-        // =================================================
-        // SOFTWARE UPDATES
-        // =================================================
-
         else if (message.Contains("software update") ||
                  message.Contains("software updates") ||
                  message.Contains("update"))
@@ -397,10 +337,6 @@ class CybersecurityChatbot : User
         }
 
 
-        // =================================================
-        // RANDOM TIP
-        // =================================================
-
         else if (message.Contains("tip") ||
                  message.Contains("advice") ||
                  message.Contains("help"))
@@ -409,9 +345,6 @@ class CybersecurityChatbot : User
         }
 
 
-        // =================================================
-        // THANK YOU
-        // =================================================
 
         else if (message.Contains("thank you") ||
                  message.Contains("thanks"))
@@ -421,9 +354,7 @@ class CybersecurityChatbot : User
         }
 
 
-        // =================================================
-        // UNKNOWN INPUT
-        // =================================================
+        // This is the default response if the chatbot does not understand the user's message
 
         else
         {
@@ -444,10 +375,7 @@ class CybersecurityChatbot : User
         }
     }
 
-
-    // =====================================================
-    // RANDOM CYBERSECURITY TIP
-    // =====================================================
+    // Gives a random tip from the TipsDatabase based on category
 
     private void GiveRandomTip()
     {

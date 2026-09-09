@@ -2,10 +2,8 @@
 using System;
 using System.Media;
 
+// This is the main program
 
-// =====================================================
-// MAIN PROGRAM
-// =====================================================
 
 class Program
 {
@@ -23,9 +21,7 @@ class Program
 
         Console.ResetColor();
 
-        // =====================================================
-        // STARTUP SOUND
-        // =====================================================
+        // This is the startup sound for the chatbot
 
         try
         {
@@ -43,9 +39,7 @@ class Program
         Console.WriteLine("==============================================");
         Console.WriteLine();
 
-        // =====================================================
-        // USER NAME INPUT
-        // =====================================================
+        // This is the user input for the name of the user
 
         string name;
 
@@ -70,7 +64,7 @@ class Program
         // Create chatbot object
         CybersecurityChatbot chatbot = new CybersecurityChatbot(name);
 
-        // Start chatbot
+        // Starts the chatbot
         chatbot.StartChat();
     }
 }

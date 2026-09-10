@@ -16,3 +16,6 @@ Users can ask about topics such as **password security, phishing, malware, hacki
 * Randomisation
 * Input Validation
 * Keyword Recognition
+
+  YouTube Link
+  https://youtu.be/0a-_7gddeXA?si=APeRek3pvze2UBFb
